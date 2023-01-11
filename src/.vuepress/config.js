@@ -426,6 +426,6 @@ module.exports = {
       backgroundColor: '#ffbca5'
     }
     ],
-    'vuepress-plugin-element-tabs'
+    'vuepress-plugin-element-tabs-less'
   ]
 }
