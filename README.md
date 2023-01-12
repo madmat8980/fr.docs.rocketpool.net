@@ -4,6 +4,9 @@ Rocket Pool Documentation Hub - Features Whitepaper, FAQs, Technical Docs, Guide
 
 We welcome all contributions! Please refer to our [ contribution guidelines ]( ./CONTRIBUTING.md ).
 
+## Todo
+- [ ] Update deployment method to avoid commiting dist (docs folder)
+
 ## Local Testing
 
 If you want to test this locally, follow the next few steps:
