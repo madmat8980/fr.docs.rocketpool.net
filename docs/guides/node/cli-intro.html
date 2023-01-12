@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Intro to the Command Line Interface | Rocket Pool</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="Rocket Pool Documentation - Decentralised ETH2 Proof of Stake Protocol">
+    <meta name="theme-color" content="#e57147">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.90c665f5.css" as="style"><link rel="preload" href="/assets/js/app.77a1a73f.js" as="script"><link rel="preload" href="/assets/js/3.59e072af.js" as="script"><link rel="preload" href="/assets/js/18.7d1bdf32.js" as="script"><link rel="prefetch" href="/assets/js/1.621421f4.js"><link rel="prefetch" href="/assets/js/10.0beeb760.js"><link rel="prefetch" href="/assets/js/100.88cdfdbd.js"><link rel="prefetch" href="/assets/js/101.0834ca19.js"><link rel="prefetch" href="/assets/js/102.e32cb0d3.js"><link rel="prefetch" href="/assets/js/103.e43de303.js"><link rel="prefetch" href="/assets/js/104.929317e0.js"><link rel="prefetch" href="/assets/js/105.08563b83.js"><link rel="prefetch" href="/assets/js/106.9624fd50.js"><link rel="prefetch" href="/assets/js/107.f9035c9d.js"><link rel="prefetch" href="/assets/js/108.6e8f42a3.js"><link rel="prefetch" href="/assets/js/109.9b0fc002.js"><link rel="prefetch" href="/assets/js/11.7bd4d14f.js"><link rel="prefetch" href="/assets/js/110.ca86ea3c.js"><link rel="prefetch" href="/assets/js/111.1ef47e8e.js"><link rel="prefetch" href="/assets/js/112.3d2cac3b.js"><link rel="prefetch" href="/assets/js/113.833fb190.js"><link rel="prefetch" href="/assets/js/114.592ba644.js"><link rel="prefetch" href="/assets/js/115.1bee6024.js"><link rel="prefetch" href="/assets/js/116.3b81f41d.js"><link rel="prefetch" href="/assets/js/117.8bad1c57.js"><link rel="prefetch" href="/assets/js/118.bc205b8b.js"><link rel="prefetch" href="/assets/js/119.f9cc32b2.js"><link rel="prefetch" href="/assets/js/12.5b723ff8.js"><link rel="prefetch" href="/assets/js/120.74f8dc58.js"><link rel="prefetch" href="/assets/js/121.86d83b5c.js"><link rel="prefetch" href="/assets/js/122.d4023124.js"><link rel="prefetch" href="/assets/js/123.f3371c33.js"><link rel="prefetch" href="/assets/js/124.c850eeea.js"><link rel="prefetch" href="/assets/js/125.db3c64ff.js"><link rel="prefetch" href="/assets/js/126.e86cd6bc.js"><link rel="prefetch" href="/assets/js/13.16e9e9b9.js"><link rel="prefetch" href="/assets/js/14.44fde8be.js"><link rel="prefetch" href="/assets/js/15.8f0dc889.js"><link rel="prefetch" href="/assets/js/16.9c08e0f3.js"><link rel="prefetch" href="/assets/js/17.4c4ccea4.js"><link rel="prefetch" href="/assets/js/19.bf6a399a.js"><link rel="prefetch" href="/assets/js/20.77c3acb5.js"><link rel="prefetch" href="/assets/js/21.ea7cb626.js"><link rel="prefetch" href="/assets/js/22.a77bc8ac.js"><link rel="prefetch" href="/assets/js/23.dd1d5b49.js"><link rel="prefetch" href="/assets/js/24.dc269e8e.js"><link rel="prefetch" href="/assets/js/25.be52baee.js"><link rel="prefetch" href="/assets/js/26.d63c478c.js"><link rel="prefetch" href="/assets/js/27.5e091fa4.js"><link rel="prefetch" href="/assets/js/28.71b07522.js"><link rel="prefetch" href="/assets/js/29.b5b16c0d.js"><link rel="prefetch" href="/assets/js/30.edd676cd.js"><link rel="prefetch" href="/assets/js/31.3aeabd45.js"><link rel="prefetch" href="/assets/js/32.b045bf2e.js"><link rel="prefetch" href="/assets/js/33.a63fc435.js"><link rel="prefetch" href="/assets/js/34.2d67d907.js"><link rel="prefetch" href="/assets/js/35.ffe2929d.js"><link rel="prefetch" href="/assets/js/36.278b96aa.js"><link rel="prefetch" href="/assets/js/37.a219276f.js"><link rel="prefetch" href="/assets/js/38.1b6aa20d.js"><link rel="prefetch" href="/assets/js/39.843b6115.js"><link rel="prefetch" href="/assets/js/4.ef6f61b1.js"><link rel="prefetch" href="/assets/js/40.44e4c249.js"><link rel="prefetch" href="/assets/js/41.3492c5f5.js"><link rel="prefetch" href="/assets/js/42.76d8ad23.js"><link rel="prefetch" href="/assets/js/43.c95eaff3.js"><link rel="prefetch" href="/assets/js/44.17b1aa47.js"><link rel="prefetch" href="/assets/js/45.250014b6.js"><link rel="prefetch" href="/assets/js/46.be457e3e.js"><link rel="prefetch" href="/assets/js/47.57b4cb16.js"><link rel="prefetch" href="/assets/js/48.5d7a0121.js"><link rel="prefetch" href="/assets/js/49.e66c6ae6.js"><link rel="prefetch" href="/assets/js/5.80c7221e.js"><link rel="prefetch" href="/assets/js/50.9f530e52.js"><link rel="prefetch" href="/assets/js/51.5a06cb70.js"><link rel="prefetch" href="/assets/js/52.725d4253.js"><link rel="prefetch" href="/assets/js/53.ae200b56.js"><link rel="prefetch" href="/assets/js/54.46b98b49.js"><link rel="prefetch" href="/assets/js/55.04d71e6f.js"><link rel="prefetch" href="/assets/js/56.60027d34.js"><link rel="prefetch" href="/assets/js/57.01278462.js"><link rel="prefetch" href="/assets/js/58.f63a1cfd.js"><link rel="prefetch" href="/assets/js/59.a5ce05cd.js"><link rel="prefetch" href="/assets/js/6.872f0834.js"><link rel="prefetch" href="/assets/js/60.f8bb3e23.js"><link rel="prefetch" href="/assets/js/61.d0656379.js"><link rel="prefetch" href="/assets/js/62.706de3ca.js"><link rel="prefetch" href="/assets/js/63.42a94f65.js"><link rel="prefetch" href="/assets/js/64.a81d4082.js"><link rel="prefetch" href="/assets/js/65.ec53f4eb.js"><link rel="prefetch" href="/assets/js/66.43e3f4d2.js"><link rel="prefetch" href="/assets/js/67.a177ba71.js"><link rel="prefetch" href="/assets/js/68.62832b62.js"><link rel="prefetch" href="/assets/js/69.174f8e4d.js"><link rel="prefetch" href="/assets/js/7.9b65285b.js"><link rel="prefetch" href="/assets/js/70.62da706e.js"><link rel="prefetch" href="/assets/js/71.23743965.js"><link rel="prefetch" href="/assets/js/72.9992b3ca.js"><link rel="prefetch" href="/assets/js/73.28689a6b.js"><link rel="prefetch" href="/assets/js/74.ece21287.js"><link rel="prefetch" href="/assets/js/75.7da512f2.js"><link rel="prefetch" href="/assets/js/76.0196383e.js"><link rel="prefetch" href="/assets/js/77.61fe48cd.js"><link rel="prefetch" href="/assets/js/78.4ab3eaa8.js"><link rel="prefetch" href="/assets/js/79.87ed6320.js"><link rel="prefetch" href="/assets/js/8.b98d8fe7.js"><link rel="prefetch" href="/assets/js/80.dd3a0e15.js"><link rel="prefetch" href="/assets/js/81.f9ffba60.js"><link rel="prefetch" href="/assets/js/82.036ab644.js"><link rel="prefetch" href="/assets/js/83.7c2c66b0.js"><link rel="prefetch" href="/assets/js/84.19c19e0e.js"><link rel="prefetch" href="/assets/js/85.5ad2325a.js"><link rel="prefetch" href="/assets/js/86.e50f49d5.js"><link rel="prefetch" href="/assets/js/87.d5f41356.js"><link rel="prefetch" href="/assets/js/88.d9742d2f.js"><link rel="prefetch" href="/assets/js/89.f421b63c.js"><link rel="prefetch" href="/assets/js/9.79a13fee.js"><link rel="prefetch" href="/assets/js/90.1a3c51a7.js"><link rel="prefetch" href="/assets/js/91.fb6f62e9.js"><link rel="prefetch" href="/assets/js/92.311d2f05.js"><link rel="prefetch" href="/assets/js/93.572afcf1.js"><link rel="prefetch" href="/assets/js/94.6cf1cf9d.js"><link rel="prefetch" href="/assets/js/95.af296af8.js"><link rel="prefetch" href="/assets/js/96.7d7983ed.js"><link rel="prefetch" href="/assets/js/97.e7d1c3ec.js"><link rel="prefetch" href="/assets/js/98.366fc7e7.js"><link rel="prefetch" href="/assets/js/99.4c96d047.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.90c665f5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/images/logo-small.png" alt="Rocket Pool" class="logo"> <span class="site-name can-hide">Rocket Pool</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/overview/" class="nav-link">
+  Overview
+</a></div><div class="nav-item"><a href="/guides/" class="nav-link router-link-active">
+  Guides
+</a></div><div class="nav-item"><a href="/developers/" class="nav-link">
+  For Developers
+</a></div><div class="nav-item"><a href="https://www.rocketpool.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Website
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://discord.com/invite/rocketpool" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Discord
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/rocket-pool/docs.rocketpool.net" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/overview/" class="nav-link">
+  Overview
+</a></div><div class="nav-item"><a href="/guides/" class="nav-link router-link-active">
+  Guides
+</a></div><div class="nav-item"><a href="/developers/" class="nav-link">
+  For Developers
+</a></div><div class="nav-item"><a href="https://www.rocketpool.net" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Website
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://discord.com/invite/rocketpool" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Discord
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/rocket-pool/docs.rocketpool.net" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guides</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guides/" aria-current="page" class="sidebar-link">Guides Overview</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Staking with Rocket Pool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Running a Rocket Pool Node</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guides/node/responsibilities.html" class="sidebar-link">A Node Operator's Responsibilities</a></li><li><a href="/guides/node/platform.html" class="sidebar-link">Node Requirements and Choosing a Platform</a></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Preparing a Local Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Preparing a Cloud (VPS) Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Installing Rocket Pool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Configuring Rocket Pool</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/guides/node/securing-your-node.html" class="sidebar-link">Securing your Node</a></li><li><a href="/guides/node/starting-rp.html" class="sidebar-link">Starting Rocket Pool and Setting Up a Node Wallet</a></li><li><a href="/guides/node/recovering-rp.html" class="sidebar-link">Importing an Existing Wallet for your Node</a></li><li><a href="/guides/node/cli-intro.html" aria-current="page" class="active sidebar-link">Intro to the Command Line Interface</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#learning-about-the-commands" class="sidebar-link">Learning About the Commands</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#service-commands" class="sidebar-link">Service Commands</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#status" class="sidebar-link">status</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#start-and-stop" class="sidebar-link">start and stop</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#logs" class="sidebar-link">logs</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#stats" class="sidebar-link">stats</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#config" class="sidebar-link">config</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#terminate" class="sidebar-link">terminate</a></li></ul></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#node-commands" class="sidebar-link">Node Commands</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#status-2" class="sidebar-link">status</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#sync" class="sidebar-link">sync</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#stake-rpl" class="sidebar-link">stake-rpl</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#deposit" class="sidebar-link">deposit</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#claim-rewards" class="sidebar-link">claim-rewards</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#join-smoothing-pool" class="sidebar-link">join-smoothing-pool</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#leave-smoothing-pool" class="sidebar-link">leave-smoothing-pool</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#initialize-fee-distributor" class="sidebar-link">initialize-fee-distributor</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#distribute-fees" class="sidebar-link">distribute-fees</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#send" class="sidebar-link">send</a></li></ul></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#minipool-commands" class="sidebar-link">Minipool Commands</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#status-3" class="sidebar-link">status</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#refund" class="sidebar-link">refund</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#exit" class="sidebar-link">exit</a></li></ul></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#useful-flags" class="sidebar-link">Useful Flags</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#setting-a-custom-max-fee-or-priority-fee-gas-price" class="sidebar-link">Setting a Custom Max Fee or Priority Fee (Gas Price)</a></li><li class="sidebar-sub-header"><a href="/guides/node/cli-intro.html#canceling-overwriting-a-stuck-transaction" class="sidebar-link">Canceling / Overwriting a Stuck Transaction</a></li></ul></li></ul></li><li><a href="/guides/node/prepare-node.html" class="sidebar-link">Preparing your Node for Operation</a></li><li><a href="/guides/node/fallback.html" class="sidebar-link">Specifying a Fallback Node</a></li><li><a href="/guides/node/fee-distrib-sp.html" class="sidebar-link">Fee Distributors and the Smoothing Pool</a></li><li><a href="/guides/node/mev.html" class="sidebar-link">MEV, MEV-Boost, and MEV Rewards</a></li><li><a href="/guides/node/create-validator.html" class="sidebar-link">Creating a New Minipool (Validator)</a></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Monitoring and Maintenance</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/guides/node/rewards.html" class="sidebar-link">Claiming Node Operator Rewards</a></li><li><a href="/guides/node/troubleshooting.html" class="sidebar-link">[NYI] Troubleshooting your Node</a></li><li><a href="/guides/node/faq.html" class="sidebar-link">FAQ (WIP)</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Redstone and The Merge</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Testing Rocket Pool with the Prater Test Network</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Running an Oracle DAO Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Legacy Guides</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="intro-to-the-command-line-interface"><a href="#intro-to-the-command-line-interface" class="header-anchor">#</a> Intro to the Command Line Interface</h1> <p>As a node operator, the CLI is your primary tool for interacting with Rocket Pool.
+You will use it to create new minipools, check on the status of everything, claim periodic RPL rewards, exit and withdraw from your minipools when you're ready, and a host of other activities.</p> <p>Once you've finished syncing the Execution (ETH1) and Beacon (ETH2) chains, all of the commands will be available for you to use.
+In this section, we'll go over a brief tour of some of the more common ones and some other tricks that the CLI can do.</p> <h2 id="learning-about-the-commands"><a href="#learning-about-the-commands" class="header-anchor">#</a> Learning About the Commands</h2> <p>To list all of the available commands, type:</p> <div class="language- extra-class"><pre class="language-text"><code>rocketpool help
+</code></pre></div><p>The output will look like this:</p> <div class="language- extra-class"><pre class="language-text"><code>NAME:
+   rocketpool - Rocket Pool CLI
+
+USAGE:
+   rocketpool [global options] command [command options] [arguments...]
+
+VERSION:
+   1.7.0-dev
+
+AUTHORS:
+   David Rugendyke &lt;david@rocketpool.net&gt;
+   Jake Pospischil &lt;jake@rocketpool.net&gt;
+   Joe Clapis &lt;joe@rocketpool.net&gt;
+   Kane Wallmann &lt;kane@rocketpool.net&gt;
+
+COMMANDS:
+   auction, a   Manage Rocket Pool RPL auctions
+   minipool, m  Manage the node's minipools
+   network, e   Manage Rocket Pool network parameters
+   node, n      Manage the node
+   odao, o      Manage the Rocket Pool oracle DAO
+   queue, q     Manage the Rocket Pool deposit queue
+   service, s   Manage Rocket Pool service
+   wallet, w    Manage the node wallet
+   help, h      Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --allow-root, -r              Allow rocketpool to be run as the root user
+   --config-path path, -c path   Rocket Pool config asset path (default: &quot;~/.rocketpool&quot;)
+   --daemon-path path, -d path   Interact with a Rocket Pool service daemon at a path on the host OS, running outside of docker
+   --maxFee value, -f value      The max fee (including the priority fee) you want a transaction to cost, in gwei (default: 0)
+   --maxPrioFee value, -i value  The max priority fee you want a transaction to use, in gwei (default: 0)
+   --gasLimit value, -l value    [DEPRECATED] Desired gas limit (default: 0)
+   --nonce value                 Use this flag to explicitly specify the nonce that this transaction should use, so it can override an existing 'stuck' transaction
+   --debug                       Enable debug printing of API commands
+   --secure-session, -s          Some commands may print sensitive information to your terminal. Use this flag when nobody can see your screen to allow sensitive data to be printed without prompting
+   --help, -h                    show help
+   --version, -v                 print the version
+
+COPYRIGHT:
+   (c) 2021 Rocket Pool Pty Ltd
+</code></pre></div><h2 id="service-commands"><a href="#service-commands" class="header-anchor">#</a> Service Commands</h2> <p>The service group involves managing the various services the smart node manages for you.</p> <p>Here is what the <code>rocketpool service help</code> output will show:</p> <div class="language- extra-class"><pre class="language-text"><code>NAME:
+   rocketpool service - Manage Rocket Pool service
+
+USAGE:
+   rocketpool service [global options] command [command options] [arguments...]
+
+COMMANDS:
+   install, i                 Install the Rocket Pool service
+   config, c                  Configure the Rocket Pool service
+   status, u                  View the Rocket Pool service status
+   start, s                   Start the Rocket Pool service
+   pause, p                   Pause the Rocket Pool service
+   stop, o                    Pause the Rocket Pool service (alias of 'rocketpool service pause')
+   logs, l                    View the Rocket Pool service logs
+   stats, a                   View the Rocket Pool service stats
+   compose                    View the Rocket Pool service docker compose config
+   version, v                 View the Rocket Pool service version information
+   prune-eth1, n              Shuts down the main ETH1 client and prunes its database, freeing up disk space, then restarts it when it's done.
+   install-update-tracker, d  Install the update tracker that provides the available system update count to the metrics dashboard
+   check-cpu-features, ccf    Checks if your CPU supports all of the features required by the &quot;modern&quot; version of certain client images. If not, it prints what features are missing.
+   get-config-yaml            Generate YAML that shows the current configuration schema, including all of the parameters and their descriptions
+   export-eth1-data           Exports the execution client (eth1) chain data to an external folder. Use this if you want to back up your chain data before switching execution clients.
+   import-eth1-data           Imports execution client (eth1) chain data from an external folder. Use this if you want to restore the data from an execution client that you previously backed up.
+   resync-eth1                Deletes the main ETH1 client's chain data and resyncs it from scratch. Only use this as a last resort!
+   resync-eth2                Deletes the ETH2 client's chain data and resyncs it from scratch. Only use this as a last resort!
+   terminate, t               Deletes all of the Rocket Pool Docker containers and volumes, including your ETH1 and ETH2 chain data and your Prometheus database (if metrics are enabled). Only use this if you are cleaning up the Smartnode and want to start over!
+
+OPTIONS:
+   --compose-file value, -f value  Optional compose files to override the standard Rocket Pool docker compose YAML files; this flag may be defined multiple times
+   --help, -h                      show help
+</code></pre></div><h3 id="status"><a href="#status" class="header-anchor">#</a> <code>status</code></h3> <p>This command shows you the current running status of each of the Docker containers managed by Rocket Pool.
+For example, the default Docker install's output looks like this:</p> <div class="language- extra-class"><pre class="language-text"><code>        Name                       Command              State                                                       Ports                                                     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+rocketpool_api          /bin/sleep infinity             Up                                                                                                                    
+rocketpool_eth1         sh /setup/start-node.sh         Up      0.0.0.0:30303-&gt;30303/tcp,:::30303-&gt;30303/tcp, 0.0.0.0:30303-&gt;30303/udp,:::30303-&gt;30303/udp, 8545/tcp, 8546/tcp
+rocketpool_eth2         sh /setup/start-beacon.sh       Up      0.0.0.0:9001-&gt;9001/tcp,:::9001-&gt;9001/tcp, 0.0.0.0:9001-&gt;9001/udp,:::9001-&gt;9001/udp                            
+rocketpool_node         /go/bin/rocketpool node         Up                                                                                                                    
+rocketpool_validator    sh /setup/start-validator.sh    Up                                                                                                                    
+rocketpool_watchtower   /go/bin/rocketpool watchtower   Up
+</code></pre></div><p>You can use it to quickly check if any of the Docker containers are having trouble, or to make sure that a <code>start</code> or <code>stop</code> command worked correctly.</p> <h3 id="start-and-stop"><a href="#start-and-stop" class="header-anchor">#</a> <code>start</code> and <code>stop</code></h3> <p>These two commands you are already familiar with.
+They simply start all of the Rocket Pool containers, or stop them.</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>The <code>pause</code> command does the same thing as <code>stop</code>.
+It's just left over as a legacy command from earlier versions of Rocket Pool.</p></div> <h3 id="logs"><a href="#logs" class="header-anchor">#</a> <code>logs</code></h3> <p>This command is another one you should have already seen.
+You can use it to look at the output logs of each Docker container.
+This can be useful for troubleshooting or getting a more detailed status report from them.</p> <p>If you simply do <code>rocketpool service logs</code> without any other arguments, it will aggregate all of the logs together and show them to you at once.</p> <p>If you want to focus on one container's output, you can add an argument to the end to specify the container.
+Valid values are <code>eth1</code>, <code>eth2</code>, <code>validator</code>, <code>api</code>, <code>node</code>, and <code>watchtower</code>.</p> <h3 id="stats"><a href="#stats" class="header-anchor">#</a> <code>stats</code></h3> <p>This command shows you some resource stats from each of the containers, which you can use to profile each one's hardware and network consumption.</p> <p>You might find it useful for monitoring the containers if your system starts running slow or has RAM problems.</p> <p>Here is some example output:</p> <div class="language- extra-class"><pre class="language-text"><code>CONTAINER ID   NAME                    CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS
+62314e5a0ecf   rocketpool_api          0.00%     18.89MiB / 62.78GiB   0.03%     50.6kB / 31.1kB   57.4MB / 0B       1
+ac629c08c896   rocketpool_eth1         5.44%     18.13GiB / 62.78GiB   28.88%    1.63GB / 1.66GB   24.4GB / 37.7GB   27
+4dfc7a2e939b   rocketpool_eth2         97.39%    2.369GiB / 62.78GiB   3.77%     1.79GB / 45MB     333MB / 24.1GB    2
+a3c22f54eff0   rocketpool_node         0.00%     12.13MiB / 62.78GiB   0.02%     308kB / 504kB     0B / 0B           15
+0d5818868ef6   rocketpool_validator    0.00%     936KiB / 62.78GiB     0.00%     12.1kB / 0B       4.57MB / 0B       2
+88bea525fa89   rocketpool_watchtower   0.00%     12.05MiB / 62.78GiB   0.02%     304kB / 503kB     0B / 0B           16
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">NOTE</p> <p>The RAM statistic here shows <strong>total allocated memory</strong>, which includes <em>virtual</em> memory.
+It does not show the raw <em>resident</em> memory consumption.</p> <p>Similarly, the CPU usage shows the total amount of CPU consumption averaged over all of the CPU cores that the container uses.
+Here, the CPU for ETH2 shows almost 100% because it is using Nimbus, which is single-threaded.</p> <p>You may find that a program like <code>htop</code> offers better insight into actual resource consumption.</p></div> <h3 id="config"><a href="#config" class="header-anchor">#</a> <code>config</code></h3> <p>This command runs through the configuration interview again.
+You can use it if you want to change your selection of Execution (ETH1) or Consensus (ETH2) client, or change some of the parameters that you initially specified when you selected them (such as your validator's graffiti message, the max number of peers to connect to, and so on).</p> <p>You can call this command at any time, but the changes won't take effect until you call <code>rocketpool service stop</code> and <code>rocketpool service start</code>.</p> <h3 id="terminate"><a href="#terminate" class="header-anchor">#</a> <code>terminate</code></h3> <p>This command will shut down the Docker containers, then delete them, delete the Rocket Pool virtual network, and delete the ETH1 and ETH2 chain data volumes.
+It essentially removes all of the Rocket Pool items from your Docker setup.
+Use it when you want to clean up that portion of the Rocket Pool installation.</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>This will irreversibly remove your chain data, which means you'll need to sync ETH1 and ETH2 again.</p> <p>This will <strong>not</strong> remove your wallet and password files, your configured settings, or your validator keys.
+To remove those, you will need to delete the <code>~/.rocketpool/data</code> folder in Docker or Hybrid Mode, or the corresponding directory in Native Mode.</p></div> <h2 id="node-commands"><a href="#node-commands" class="header-anchor">#</a> Node Commands</h2> <p>The <code>node</code> group involves operations on your Rocket Pool node.
+We'll cover these more in-depth in the next section where we create a minipool, but it may be helpful to see them all at a glance.</p> <p>Here is what the <code>rocketpool node help</code> output will show:</p> <div class="language- extra-class"><pre class="language-text"><code>NAME:
+   rocketpool node - Manage the node
+
+USAGE:
+   rocketpool node [global options] command [command options] [arguments...]
+
+COMMANDS:
+   status, s                      Get the node's status
+   sync, y                        Get the sync progress of the eth1 and eth2 clients
+   register, r                    Register the node with Rocket Pool
+   rewards, e                     Get the time and your expected RPL rewards of the next checkpoint
+   set-withdrawal-address, w      Set the node's withdrawal address
+   confirm-withdrawal-address, f  Confirm the node's pending withdrawal address if it has been set back to the node's address itself
+   set-timezone, t                Set the node's timezone location
+   swap-rpl, p                    Swap old RPL for new RPL
+   stake-rpl, k                   Stake RPL against the node
+   claim-rewards, c               Claim available RPL and ETH rewards for any checkpoint you haven't claimed yet
+   withdraw-rpl, i                Withdraw RPL staked against the node
+   deposit, d                     Make a deposit and create a minipool
+   send, n                        Send ETH or tokens from the node account to an address
+   set-voting-delegate, sv        Set the address you want to use when voting on Rocket Pool governance proposals, or the address you want to delegate your voting power to.
+   clear-voting-delegate, cv      Remove the address you've set for voting on Rocket Pool governance proposals.
+   initialize-fee-distributor, z  Create the fee distributor contract for your node, so you can withdraw priority fees and MEV rewards after the merge
+   distribute-fees, b             Distribute the priority fee and MEV rewards from your fee distributor to your withdrawal address and the rETH contract (based on your node's average commission)
+   join-smoothing-pool, js        Opt your node into the Smoothing Pool
+   leave-smoothing-pool, ls       Leave the Smoothing Pool
+   sign-message, sm               Sign an arbitrary message with the node's private key
+
+OPTIONS:
+   --help, -h  show help
+</code></pre></div><p>Below is a summary of some of the commands you'll tend to need during typical node operation.</p> <h3 id="status-2"><a href="#status-2" class="header-anchor">#</a> <code>status</code></h3> <p>This command will give you a high-level view of your entire node at a glance.
+It includes how much ETH and RPL you have staked, how many minipools you have and their statuses, your RPL collateral ratio, and more.</p> <p>This is an example of what <code>rocketpool node status</code> shows once you have your node registered and some minipools set up:</p> <div class="language- extra-class"><pre class="language-text"><code>=== Account and Balances ===
+The node &lt;node address&gt; has a balance of 1.493392 ETH and 0.000000 RPL.
+The node is registered with Rocket Pool with a timezone location of Etc/UTC.
+
+=== Penalty Status ===
+The node does not have any penalties for cheating with an invalid fee recipient.
+
+=== DAO Voting ===
+The node does not currently have a voting delegate set, and will not be able to vote on Rocket Pool governance proposals.
+
+=== Withdrawal Address ===
+The node's withdrawal address has not been changed, so rewards and withdrawals will be sent to the node itself.
+Consider changing this to a cold wallet address that you control using the `set-withdrawal-address` command.
+
+=== Fee Distributor and Smoothing Pool ===
+The node's fee distributor &lt;fee distributer contract address&gt; has a balance of 0.000000 ETH.
+The node is opted into the Smoothing Pool.
+
+=== RPL Stake and Minipools ===
+The node has a total stake of 600.000000 RPL and an effective stake of 600.000000 RPL, allowing it to run 5 minipool(s) in total.
+This is currently a 54.65% collateral ratio.
+The node must keep at least 109.788901 RPL staked to collateralize its minipools and claim RPL rewards.
+
+The node has a total of 1 active minipool(s):
+- 1 staking
+
+</code></pre></div><h3 id="sync"><a href="#sync" class="header-anchor">#</a> <code>sync</code></h3> <p>This command will show you the current sync status of your Execution (ETH1) and Consensus (ETH2) clients.
+You'll probably use it a lot when you first set the node up, then never need it again (unless you change or reset your clients).</p> <p>The output of <code>rocketpool node sync</code> will look like this:</p> <div class="language- extra-class"><pre class="language-text"><code>Your Smartnode is currently using the Prater Test Network.
+
+Your eth1 client hasn't synced enough to determine if your eth1 and eth2 clients are on the same network.
+To run this safety check, try again later when eth1 has made more sync progress.
+
+Your primary execution client is still syncing (67.12%).
+You do not have a fallback execution client enabled.
+Your primary consensus client is still syncing (99.94%).
+You do not have a fallback consensus client enabled.
+</code></pre></div><p>Note that <strong>Prysm</strong> currently doesn't provide its completion percent - you'll need to look in the <code>eth2</code> logs if you use it.</p> <h3 id="stake-rpl"><a href="#stake-rpl" class="header-anchor">#</a> <code>stake-rpl</code></h3> <p>This command is what you'll use when you want to add more RPL collateral to your node.
+Doing so will increase your collateral ratio, which will increase your RPL rewards at each checkpoint (more on this later).
+It may allow you to run more minipools or withdraw your rewards for the current checkpoint if your collateral is currently too low.</p> <p>Unlike the other commands so far, this one is actually <em>interactive</em> because it will trigger a transaction - it isn't simply informational.</p> <p>It will first ask you how much RPL you'd like to stake, with some pre-defined options for convenience or the ability to specify a custom amount:</p> <div class="language- extra-class"><pre class="language-text"><code>Please choose an amount of RPL to stake:
+1: The minimum minipool stake amount (284.477473 RPL)?
+2: The maximum effective minipool stake amount (4267.162095 RPL)?
+3: Your entire RPL balance (4820.395655 RPL)?
+4: A custom amount
+</code></pre></div><p>Once you select an option, you will be shown some information about the suggested gas price and estimated amount to be used, along with a confirmation dialog:</p> <div class="language- extra-class"><pre class="language-text"><code>Please enter an amount of RPL to stake:
+0.00001
+
+Suggested gas price: 1.000000 Gwei
+Estimated gas used: 69484 gas
+Estimated gas cost: 0.000069 ETH
+
+NOTE: This operation requires multiple transactions.
+The actual gas cost may be higher than what is estimated here.
+Are you sure you want to stake 0.000010 RPL? You will not be able to unstake this RPL until you exit your validators and close your minipools, or reach over 150% collateral!. [y/n]
+</code></pre></div><p>If you confirm, you will be shown the transaction hash and given a link to <a href="https://etherscan.io" target="_blank" rel="noopener noreferrer">Etherscan<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> so you can follow its progress:</p> <div class="language- extra-class"><pre class="language-text"><code>Approving RPL for staking...
+Transaction has been submitted with hash &lt;transaction hash&gt;.
+You may follow its progress by visiting:
+https://goerli.etherscan.io/tx/&lt;transaction hash&gt;
+
+Waiting for the transaction to be mined... **DO NOT EXIT!** This transaction is one of several that must be completed.
+</code></pre></div><p>Most operations only require one transaction, so the CLI will wait until it has been mined and then exit.
+However, <code>stake-rpl</code> is one of the few commands that requires <em>two</em> transactions, so this dialog will appear twice.</p> <h3 id="deposit"><a href="#deposit" class="header-anchor">#</a> <code>deposit</code></h3> <p>This command will let you deposit ETH and create a new minipool (a new ETH2 validator).
+As with <code>stake-rpl</code>, this is an interactive command that will perform a transaction.</p> <p>It will start by asking you how much you want to deposit to the new minipool:</p> <div class="language- extra-class"><pre class="language-text"><code>Please choose an amount of ETH to deposit:
+1: 32 ETH (minipool begins staking immediately)
+2: 16 ETH (minipool begins staking after ETH is assigned)
+</code></pre></div><p>(For more information on these options, see the next section on <a href="/guides/node/create-validator.html">Creating a Minipool</a>).</p> <p>Once you select your deposit amount, it will prompt you for your choice of commission rate slippage:</p> <div class="language- extra-class"><pre class="language-text"><code>The current network node commission rate that your minipool should receive is 20.000000%.
+The suggested maximum commission rate slippage for your deposit transaction is 1.000000%.
+This will result in your minipool receiving a minimum possible commission rate of 19.000000%.
+Do you want to use the suggested maximum commission rate slippage? [y/n]
+</code></pre></div><p>Again, this option will be described in more detail in the next section.</p> <p>After that, you will be prompted with the expected gas cost for the transaction and one final confirmation dialog.
+If you accept, your ETH deposit will be processed and you will create a new minipool (and a corresponding ETH2 validator).</p> <h3 id="claim-rewards"><a href="#claim-rewards" class="header-anchor">#</a> <code>claim-rewards</code></h3> <p>When your node detects a new rewards checkpoint, it will automatically download the rewards tree file with the information for that interval (if you're using the default of Download Mode - see below for information on generating your own trees instead of downloading them).
+You can then review your rewards using the following command:</p> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node claim-rewards
+</code></pre></div><p>As intervals go by and you accumulate rewards, the output will look like this:</p> <center><p><img src="/assets/img/claim-rewards-gb.9158e555.png" alt=""></p></center> <p>Here you can quickly see how many rewards you've earned at each interval, and can decide which ones you want to claim.</p> <p>You can also specify an amount you want to restake during this claim:</p> <center><p><img src="/assets/img/autostake.635af999.png" alt=""></p></center> <p>This will let you compound your RPL rewards in one transaction, using substantially less gas than you currently needed to use with the legacy claim system.</p> <div class="custom-block danger"><p class="custom-block-title">WARNING</p> <p>If you are below 10% RPL collateral <em>at the time of the snapshot</em>, you will not be eligible for rewards for that snapshot.
+Unlike the current system, where you can simply &quot;top off&quot; before you claim in order to become eligible again, this will be locked in that snapshot forever and <strong>you will never receive rewards for that period</strong>.
+You <strong>must</strong> be above 10% collateral at the time of a snapshot in order to receive rewards for that period.</p></div> <div class="custom-block tip"><p class="custom-block-title">NOTE</p> <p>If you prefer to build the rewards checkpoint manually instead of downloading the one created by the Oracle DAO, you can change this setting from <code>Download</code> to <code>Generate</code> in the TUI:</p> <center><p><img src="/assets/img/tui-generate-tree.870d3516.png" alt=""></p></center> <p>As the tip implies, you will need access to an Execution client archive node to do this.
+If your local Execution client is not an archive node, you can specify a separate one (such as Infura or Alchemy) in the <code>Archive-Mode EC URL</code> box below it.
+This URL will only be used when generating Merkle trees; it will not be used for validation duties.</p></div> <h3 id="join-smoothing-pool"><a href="#join-smoothing-pool" class="header-anchor">#</a> <code>join-smoothing-pool</code></h3> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node join-smoothing-pool
+</code></pre></div><p>This will record you as opted-in in the Rocket Pool contracts and automatically change your Validator Client's <code>fee recipient</code> from your node's distributor contract to the Smoothing Pool contract.</p> <p>Note that once you opt in, there is a <strong>28 day cooldown</strong> (one full rewards interval length) until you can opt out.</p> <h3 id="leave-smoothing-pool"><a href="#leave-smoothing-pool" class="header-anchor">#</a> <code>leave-smoothing-pool</code></h3> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node leave-smoothing-pool
+</code></pre></div><p>This will opt you out of the Smoothing Pool if you're currently opted in, and have waited at least 28 days after opting in.
+Once <strong>the next epoch after the current epoch</strong> is finalized, it will automatically change your node's <code>fee recipient</code> from the Smoothing Pool back to your node's distributor contract.
+This is to ensure you don't get penalized for front-running the exit process when you see that you have a proposal coming up.</p> <h3 id="initialize-fee-distributor"><a href="#initialize-fee-distributor" class="header-anchor">#</a> <code>initialize-fee-distributor</code></h3> <p>To initialize your node's distributor, simply run this new command:</p> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node initialize-fee-distributor
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">NOTE</p> <p>After the Redstone update, you must call this function before you can create any new minipools with <code>rocketpool node deposit</code>.</p></div> <h3 id="distribute-fees"><a href="#distribute-fees" class="header-anchor">#</a> <code>distribute-fees</code></h3> <p>When your distributor has been initialized, you can claim and distribute its entire balance using the following command:</p> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node distribute-fees
+</code></pre></div><p>This will send your share of the rewards to your <strong>withdrawal address</strong>.</p> <h3 id="send"><a href="#send" class="header-anchor">#</a> <code>send</code></h3> <p>This command lets you send ETH, RPL, or other Rocket Pool-related tokens from the node wallet to a different address.
+This might be useful if you want to move your funds on the wallet elsewhere.</p> <p>The syntax for using the <code>send</code> command is like this:</p> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node send &lt;amount&gt; &lt;token&gt; &lt;address or ENS name&gt;
+</code></pre></div><p>The arguments are as follows:</p> <ul><li><code>&lt;amount&gt;</code> is the amount of the token to send.</li> <li><code>&lt;token&gt;</code> is the token to send - this can be <code>eth</code>, <code>rpl</code>, <code>fsrpl</code> (the old legacy RPL token), or <code>reth</code>.</li> <li><code>&lt;address or ENS name&gt;</code> is the Ethereum address (or ENS name) to send the tokens to.</li></ul> <p>For example:</p> <div class="language- extra-class"><pre class="language-text"><code>rocketpool node send 1 eth &lt;my friend's address&gt;
+</code></pre></div><p>would send 1 ETH to my friend.</p> <h2 id="minipool-commands"><a href="#minipool-commands" class="header-anchor">#</a> Minipool Commands</h2> <p>The <code>minipool</code> group involves commands that affect your minipools.
+As with the <code>node</code> group, we'll cover these more in-depth in the next section but it may be helpful to see them all now.</p> <p>Here is what the <code>rocketpool minipool help</code> output will show:</p> <div class="language- extra-class"><pre class="language-text"><code>NAME:
+   rocketpool minipool - Manage the node's minipools
+
+USAGE:
+   rocketpool minipool [global options] command [command options] [arguments...]
+
+COMMANDS:
+   status, s                   Get a list of the node's minipools
+   stake, t                    Stake a minipool after the scrub check, moving it from prelaunch to staking.
+   refund, r                   Refund ETH belonging to the node from minipools
+   exit, e                     Exit staking minipools from the beacon chain
+   delegate-upgrade, u         Upgrade a minipool's delegate contract to the latest version
+   delegate-rollback, b        Roll a minipool's delegate contract back to its previous version
+   set-use-latest-delegate, l  If enabled, the minipool will ignore its current delegate contract and always use whatever the latest delegate is
+   find-vanity-address, v      Search for a custom vanity minipool address
+
+OPTIONS:
+   --help, -h  show help
+</code></pre></div><p>Below is a summary of the commands that you'll typically use.</p> <h3 id="status-3"><a href="#status-3" class="header-anchor">#</a> <code>status</code></h3> <p>This command simply provides a summary of each of your minipools.
+This includes its current status, the eth1 address of the minipool, the commission on it (called the <code>node fee</code>), the public key of the corresponding ETH2 validator, and some other things:</p> <div class="language- extra-class"><pre class="language-text"><code>$ rocketpool minipool status
+
+1 Staking minipool(s):
+
+--------------------
+
+Address:              &lt;minipool eth1 address&gt;
+Status updated:       2021-05-21, 14:05 +0000 UTC
+Node fee:             20.000000%
+Node deposit:         16.000000 ETH
+RP ETH assigned:      2021-05-23, 13:32 +0000 UTC
+RP deposit:           16.000000 ETH
+Validator pubkey:     &lt;validator eth2 address&gt;
+Validator index:      0
+Validator seen:       yes
+</code></pre></div><h3 id="refund"><a href="#refund" class="header-anchor">#</a> <code>refund</code></h3> <p>This command lets you pull 16 ETH back from a minipool if you deposited 32 ETH to create one, once Rocket Pool was able to contribute 16 ETH from the rETH staking pool.</p> <h3 id="exit"><a href="#exit" class="header-anchor">#</a> <code>exit</code></h3> <p>This command submits a voluntary exit for your validator on the Beacon Chain.
+Use this when you want to close a validator and withdraw its final ETH balance.
+Note that <strong>this cannot be undone</strong> - once you trigger an exit, the validator will shut down permanently.</p> <h2 id="useful-flags"><a href="#useful-flags" class="header-anchor">#</a> Useful Flags</h2> <p>There are some useful global flags that you can add to some of the above commands, which you may want to take advantage of.</p> <h3 id="setting-a-custom-max-fee-or-priority-fee-gas-price"><a href="#setting-a-custom-max-fee-or-priority-fee-gas-price" class="header-anchor">#</a> Setting a Custom Max Fee or Priority Fee (Gas Price)</h3> <p>Starting with <a href="https://coinquora.com/ethereum-london-hard-fork-all-you-need-to-know/" target="_blank" rel="noopener noreferrer">the London ETH1 hardfork<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> in July of 2021, Ethereum transactions no longer use a single gas price for their transactions.
+Instead, modern Ethereum transactions use two values:</p> <ul><li>The <strong>max fee</strong>, which describes the absolute maximum gas price you're willing to accept on a transaction</li> <li>The <strong>max priority fee</strong>, which describes the maximum amount you're willing to &quot;tip&quot; the miner for including your transaction in a block</li></ul> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>The way these two values work can be a bit convoluted, so here are some simple examples.</p> <p>Let's say the current network fee, called the <strong>base fee</strong>, is at 50 gwei.
+You submit a transaction with an <strong>80 gwei</strong> max fee, and a priority fee of <strong>2 gwei</strong>.</p> <p>Because the network's base fee is lower than your max fee, this transaction could get picked up in the current block.
+It would cost you <strong>50 gwei</strong> for the base fee and <strong>2 gwei</strong> for the priority fee; even though you set your max fee to 80, <strong>it would only cost you 52 gwei total</strong>.</p> <p>As another example, say you have that same transaction, but now the network's base fee is <strong>100 gwei</strong>.
+Since 100 gwei is larger than your 80 gwei max fee, your transaction <strong>will not</strong> be included in this block.
+Instead, it will simply sit in the transaction pool until the base fee is low enough to include it.</p> <p>Now, let's say the current base fee is <strong>50 gwei</strong> again, and your transaction has a max fee of <strong>80</strong> gwei and a priority fee of <strong>4 gwei</strong>.
+It would execute with a total cost of <strong>54 gwei</strong>.
+The 4 gwei priority fee would ensure that it was included in front of all of the transactions with a lower priority fee.</p> <p>If you <strong>really</strong> want the transaction to go through at all costs, you can set the priority fee to be the same as the max fee.
+This emulates the legacy gas behavior, so your transaction will use all of the gas you give it - regardless of whether or not the network's base fee is lower than your max fee or not.</p></div> <p>By default, Rocket Pool will use an oracle to look at the current transaction pool and suggest a reasonable max fee for any transactions you trigger.
+It uses <a href="https://etherchain.org/tools/gasnow" target="_blank" rel="noopener noreferrer">EtherChain<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> for its primary suggestion oracle, and <a href="https://etherscan.io/gastracker" target="_blank" rel="noopener noreferrer">Etherscan<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> as a backup.</p> <p>If you prefer, you can set a custom max fee (in gwei) you'd be willing to pay with the <code>-f</code> flag.
+You can also set a custom priority fee with the <code>-i</code> flag.</p> <p>To do this, add them after <code>rocketpool</code> and before the other command information.</p> <p>For example, calling <code>node set-timezone</code> with this flag would provide the following output:</p> <div class="language- extra-class"><pre class="language-text"><code>$ rocketpool -f 10 node set-timezone
+
+Would you like to detect your timezone automatically? [y/n]
+n
+
+Please enter a timezone to register with in the format 'Country/City':
+Australia/Brisbane
+
+You have chosen to register with the timezone 'Australia/Brisbane', is this correct? [y/n]
+y
+
+Using the requested max fee of 10.00 gwei (including a max priority fee of 2.00 gwei).
+Total cost: 0.0005 to 0.0007 ETH
+Are you sure you want to set your timezone? [y/n]
+</code></pre></div><p>This shows that regardless of what max fee the network recommends, it will use your custom max fee of 10 gwei (and priority fee if you specify it) instead when submitting this transaction.</p> <div class="custom-block warning"><p class="custom-block-title">NOTE</p> <p>If you set a manual max fee, we strongly encourage you to use a third-party gas price oracle such as <a href="https://etherchain.org/tools/gasnow" target="_blank" rel="noopener noreferrer">EtherChain<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> to determine if that fee is high enough for the current network conditions before submitting the transaction.</p></div> <h3 id="canceling-overwriting-a-stuck-transaction"><a href="#canceling-overwriting-a-stuck-transaction" class="header-anchor">#</a> Canceling / Overwriting a Stuck Transaction</h3> <p>Sometimes, you might run into a scenario where you sent a transaction to the network but you used a gas price that is far too low for the network conditions, and it will take a prohibitively long time to execute.
+Since all of your subsequent transactions will wait until that one goes through, that transaction essentially blocks all of the operations on your Rocket Pool node.
+To deal with this situation, we've added a global flag that lets you &quot;cancel&quot; such a transaction by replacing it with something else.</p> <p>Every Ethereum wallet, including your node wallet, sends transactions sequentially.
+Each transaction you send has a number called a <code>nonce</code> that identifies where it lives in that sequence.
+The very first transaction you send will have a <code>nonce</code> of 0, the next one you send will have a <code>nonce</code> of 1, and so on.</p> <p>This overwriting technique involves sending a <em>new</em> transaction that uses the same <code>nonce</code> as your existing <em>stuck</em> transaction, but will ideally include a higher gas price than the stuck one.
+This means that the new one will be mined first.
+As soon as it's mined into a block, the old one will be discarded from the network as though it was never sent in the first place.</p> <p>To use this flag, you first need to find the <code>nonce</code> of your stuck transaction:</p> <ol><li>Go to an ETH1 block explorer like <a href="https://etherscan.io" target="_blank" rel="noopener noreferrer">https://etherscan.io<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</li> <li>Navigate to the address of your wallet, and look at the list of transactions.</li> <li>Go through them, starting with the most recent, until you find the furthest one down the list that has the <code>Pending</code> state.</li> <li>Mark the <code>nonce</code> of that transaction. That's what you'll need.</li></ol> <p>Once you have it, simply call any transaction with the CLI using the <code>--nonce &lt;value&gt; -i 2.2</code> flags after <code>rocketpool</code> and before the rest of the command.</p> <div class="custom-block warning"><p class="custom-block-title">NOTE</p> <p>You <strong>must</strong> include the <code>-i</code> (priority fee) flag in order to overwrite a previous transaction.
+This number must be at least 10% higher than whatever priority fee your old transaction used.
+The Smartnode uses a priority fee of 2 gwei by default, so a value of <code>2.2</code> is usually sufficient for an override.</p> <p>If your old transaction used a custom fee (say, 10 gwei), you will need to set it at least 10% higher in the overriding transaction (so in this example, 11 gwei).</p></div> <p>As an example, say I submitted a transaction with a <code>nonce</code> of 10 and a max fee of 20 gwei, but the current network fee is 100 gwei so my transaction is stuck.
+To fix it, I will submit a transaction where I send a small amount of ETH from myself back to myself with a higher max fee (say, 150 gwei) and a higher priority fee.
+I'll burn a little gas doing it, but it will unstick the broken transaction:</p> <div class="language- extra-class"><pre class="language-text"><code>$ rocketpool --nonce 10 -f 150 -i 2.2 node send 0.0001 eth &lt;node wallet address&gt;
+
+Using the requested max fee of 150.00 gwei (including a max priority fee of 2.20 gwei).
+Total cost: 0.0032 to 0.0032 ETH
+Are you sure you want to send 0.000100 eth to &lt;node wallet address&gt;? This action cannot be undone! [y/n]
+</code></pre></div><p>The Smartnode stack will automatically check to make sure that the <code>nonce</code> you have provided is valid (it refers to a pending transaction) before sending it and wasting your gas accidentally.
+If not, it will return an error message.
+Otherwise, it will go through and provide you with the transaction details so you can monitor it to confirm that it did, in fact, overwrite your old stuck transaction.</p> <p>That's it for the common CLI commands.
+In the next section, we'll walk through how to create a minipool and start validating on the Beacon Chain.</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/rocket-pool/docs.rocketpool.net/edit/main/src/guides/node/cli-intro.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guides/node/recovering-rp.html" class="prev">
+        Importing an Existing Wallet for your Node
+      </a></span> <span class="next"><a href="/guides/node/prepare-node.html">
+        Preparing your Node for Operation
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.77a1a73f.js" defer></script><script src="/assets/js/3.59e072af.js" defer></script><script src="/assets/js/18.7d1bdf32.js" defer></script>
+  </body>
+</html>

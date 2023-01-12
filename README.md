@@ -19,3 +19,14 @@ If you want to test this locally, follow the next few steps:
 Files under `/.vuepress` include [components](https://vuejs.org/v2/guide/components.html), style and configs.
 
 To add new pages and have them appear in the side menu, add the links to the `sidebar` property in the `/.vuepress/config.js` file for them to appear.
+
+## Hash workaround
+From node 17, webpack 4 is unsupported, and so following error appears
+
+    node:internal/crypto/hash:71
+        this[kHandle] = new _Hash(algorithm, xofLen);
+
+Workaround :
+
+    NODE_OPTIONS=--openssl-legacy-provider yarn build
+    NODE_OPTIONS=--openssl-legacy-provider yarn dev
